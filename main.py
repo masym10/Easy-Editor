@@ -14,7 +14,7 @@ app = QApplication([])
 main_window = QWidget()
 main_window.setStyleSheet("background-color: #D500FF; color: #000")
 main_window.show()
-main_window.setWindowTitle("Easy Editor")
+main_window.setWindowTitle("Easy-Editor")
 main_window.resize(700,500)
 
 #list_widget
@@ -138,7 +138,6 @@ class ImageProcessor():
         else:
             os.mkdir(path)
         
-
     def load_image(self, filename):
         self.filename = filename
         fullpath = os.path.join(workdir, filename)
@@ -261,7 +260,5 @@ btn_fd.clicked.connect(workimage.detail)
 btn_fe.clicked.connect(workimage.find_edges)
 btn_sh.clicked.connect(workimage.sharpen)
 list_images.currentRowChanged.connect(showChosenImage)
-
-
 
 app.exec_()
